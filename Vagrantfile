@@ -10,13 +10,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "scraper"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.network :private_network, ip: "192.168.10.100"
-  config.vm.network :public_network
-  config.vm.synced_folder "./", "/opt/local"
+  # config.vm.network :public_network
+  config.vm.synced_folder "./", "/opt/local/"
 
   config.vm.provider :virtualbox do |vb|
     # Don't boot with headless mode
     vb.gui = false
     vb.customize ["modifyvm", :id, "--memory", "2096"]
+  end
+
+
+  config.vm.provision :puppet do |puppet|
+    # puppet.manifests_path = "manifests"
+    # puppet.manifest_file  = "site.pp"
   end
 
   # config.vm.network :forwarded_port, guest: 80, host: 8080
