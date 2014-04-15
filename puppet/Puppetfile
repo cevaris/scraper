@@ -3,8 +3,9 @@
 
 forge "http://forge.puppetlabs.com"
 
-mod "maestrodev/rvm"
-
+# mod "maestrodev/rvm"
+mod "jlbfalcao/jruby"
+mod "puppetlabs/java"
 
 
 # mod 'puppetlabs/stdlib'
