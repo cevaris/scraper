@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "scraper"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.network :private_network, ip: "192.168.10.100"
-  # config.vm.network :public_network
+  # config.vm.network :public_network, bridge:'en0: Wi-Fi (AirPort)'
   config.vm.synced_folder "./", "/opt/local/"
 
   config.vm.provider :virtualbox do |vb|
