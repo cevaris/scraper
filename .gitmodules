@@ -1,0 +1,3 @@
+[submodule "gems/rscape"]
+	path = gems/rscape
+	url = https://github.com/cevaris/rscape.git
