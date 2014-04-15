@@ -10,7 +10,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "scraper"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.network :private_network, ip: "192.168.10.100"
-  # config.vm.network :public_network, bridge:'en0: Wi-Fi (AirPort)'
   config.vm.synced_folder "./", "/opt/local/"
 
   config.vm.provider :virtualbox do |vb|
@@ -19,7 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", "2096"]
   end
 
-  # config.vm.provision :shell, inline: 'sudo apt-get update'
+  config.vm.provision :shell, inline: 'sudo apt-get update'
   
 
   config.vm.provision :puppet do |puppet|

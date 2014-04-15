@@ -6,6 +6,7 @@ GEM
       json_pure
     highline (1.6.21)
     json (1.8.1)
+    json (1.8.1-java)
     json_pure (1.8.1)
     librarian (0.1.2)
       highline
@@ -21,6 +22,7 @@ GEM
     thor (0.19.1)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
