@@ -1,1 +1,5 @@
 .vagrant
+.tmp/
+puppet/.*
+puppet/modules/
+
